@@ -45,6 +45,11 @@
 #define DEFAULT_MAX_SSE_CLIENTS 4
 #endif
 
+#ifdef ESP_PLATFORM
+#else
+#define ets_printf printf
+#endif
+
 class AsyncEventSource;
 class AsyncEventSourceResponse;
 class AsyncEventSourceClient;
